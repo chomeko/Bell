@@ -12,6 +12,7 @@ import FireStore, {fireReducer} from './fire/Store';
 const persistConfig = {
   key: 'root',
   storage,
+  blacklist: ['message']
 };
 
 const persisteReducer = persistReducer(persistConfig, fireReducer);
