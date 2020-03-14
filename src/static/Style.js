@@ -1,3 +1,5 @@
+import css from 'styled-jsx/css';
+
 export default <style>{`
   body {
     margin:10px;
