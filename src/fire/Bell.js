@@ -47,21 +47,6 @@ class Bell extends Component{
     transition: "all 120ms ease-out 3s"
   }
 
-  btnHover = {
-    borderRadius: "14.8rem",
-    background: "linear-gradient(145deg, #e6cb00, #fff100)",
-    boxShadow:  "-5px -5px 10px #c7b000,5px 5px 10px #ffff00",
-    border: "none",
-    width: "23rem",
-    height: "23rem",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontWeight: "bold",
-    fontSize:"2.0rem",
-    margin: "auto"
-  }
-
   constructor(props) {
     super(props);
     this.state = {
@@ -99,15 +84,6 @@ class Bell extends Component{
     let db = firebase.database();
     let ref = db.ref('count');
     ref.set({ value: this.state.dbvalue + this.props.count });
-  }
-
-  onMouseEnter() {
-    this.setState({ hovered: true });
-  }
-
-  // カーソルが外れた時に状態を変更するイベントハンドラ
-  onMouseLeave() {
-    this.setState({ hovered: false });
   }
 
   render() {
