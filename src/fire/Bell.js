@@ -93,7 +93,9 @@ class Bell extends Component{
         <p style={this.text}>{this.props.message}</p>
         { this.props.click ?
           <button style={this.btn}
-            onClick={this.doAction}>
+            onClick={this.doAction}
+            disabled={this.state.dbvalue === 0}
+          >
             呼び出す
           </button>
           :
