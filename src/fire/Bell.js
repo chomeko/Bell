@@ -100,7 +100,9 @@ class Bell extends Component{
           </button>
           :
           <button style={this.btnPush}
-            onClick={this.doAction}>
+            onClick={this.doAction}
+            disabled={this.state.dbvalue === 0}
+          >
             呼び出す
           </button>
         }
