@@ -65,7 +65,6 @@ class Bell extends Component{
       .on("value", (snapshot) => {
         let data = snapshot.val();
         console.log("data=", data);
-        console.log("click=", this.props.click);
         self.setState({
           dbvalue: data.value
         });
@@ -77,8 +76,14 @@ class Bell extends Component{
     //クリックaction
     if (this.props.push === false) {
       this.props.dispatch({ type: 'INCREMENT' });
+      console.log(this.props.count);
+      console.log(this.props.push);
+      console.log(this.props.message);
     } else {
       this.props.dispatch({ type: 'DECREMENT' });
+      console.log(this.props.count);
+      console.log(this.props.push);
+      console.log(this.props.message);
     }
     //dbに追加
     let db = firebase.database();
